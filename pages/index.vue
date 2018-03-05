@@ -43,8 +43,8 @@
             </div>
           </div>
           <div class="btn-container md-xsmall-hide">
-            <md-button class="redeem-btn festive" @click=onRedeemClick>
-              {{ $t('Home.Sale.button.createNow') }}
+            <md-button class="redeem-btn festive" @click=onBuyClick>
+              {{ $t('Home.Sale.button.buyCoin') }}
             </md-button>
           </div>
         </div>
@@ -175,9 +175,9 @@ export default {
   },
   methods: {
     imgUrl,
-    onRedeemClick() {
+    onBuyClick() {
       logTrackerEvent(this, 'RegFlow', 'ClickIndexRedCTA', 'click the Huge red button on homepage', 1);
-      this.$router.push({ name: 'register' });
+      this.$router.push({ name: 'tokensale' });
     },
   },
   computed: {
